@@ -16,13 +16,12 @@ honestly it looks like it's not only possible, but kind of a breeze.
 
 Currently, my best approach has been to let the bot play 500 random games at first, take the best 50, have a RandomForest train
 on those, and then have that model play 500 games, inject 10% random moves to ensure there's "innovation",
-take the best 50 games, etc, until it is crushing the Dragon every time.
+take the best 50 games, etc, until it is crushing the Dragon every time.  After it hits a bit of a wall, you can remove the randomness and let it refine what it already knows.
 
-Right now it wins 25% of the time (if you play randomly you will basically never win) and the problem is that at a certain point,
-the 10% randomness needs to be removed from its play.  Once the model has made all the innovations necessary, I need to give
-itself a way of knowing that that is the case, and to shift gears, shore up on what it already knows, or maybe just
-allow it to shift gears either way in regard to injecting randomness if its been stuck for a certain amount of time.
+Right now it wins 92% of the time.
 
-For now I just wanted to get the repo up cus I thought the idea was kinda cool.
+At some point, I want to try making a general process where I run the function, walk away, come back, and the model automatically goes from total randomness to victory in 90%+ area.
+
+This game is somewhat trivial once you know the trick, but the remarkable thing to me was that it didn't know any of the rules.  It only knew "lowering Dragon HP is good", "Killing the Dragon is really good", and "Killing the Dragon fast is a nice bonus".
 
 Have a good day!
